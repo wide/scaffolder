@@ -1,0 +1,28 @@
+{
+  "name": "@wide/scaffolder",
+  "version": "1.0.0",
+  "description": "Automatised project generator.",
+  "author": "Aymeric Assier (https://github.com/myeti)",
+  "contributors": [
+    "Aymeric Assier (https://github.com/myeti)",
+    "Julien Martins Da Costa (https://github.com/jdacosta)"
+  ],
+  "main": "lib",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "scripts": {
+    "build": "babel src/ -d lib/ --presets @babel/preset-env",
+    "prepare": "rimraf lib/ && npm run build"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^10.0.0",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "rimraf": "^3.0.0"
+  }
+}
