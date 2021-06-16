@@ -1,18 +1,23 @@
 {
   "name": "@wide/scaffolder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatised project generator.",
+  "license": "MIT",
   "author": "Aymeric Assier (https://github.com/myeti)",
   "contributors": [
     "Aymeric Assier (https://github.com/myeti)",
     "Julien Martins Da Costa (https://github.com/jdacosta)"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wide/scaffolder.git"
+  },
   "main": "lib",
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.18.0"
   },
   "scripts": {
-    "build": "babel src/ -d lib/ --presets @babel/preset-env",
+    "build": "babel src/ -d lib/ --presets=@babel/preset-env",
     "prepare": "rimraf lib/ && npm run build"
   },
   "dependencies": {
@@ -22,7 +27,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.2"
   }
 }
