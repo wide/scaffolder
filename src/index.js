@@ -4,13 +4,11 @@ import path from 'path'
 import DEFAULT_TASKS from './tasks'
 
 const DEFAULT_CONFIG = {
-  template: 'template',
-  plop: 'plop',
+  template: argv.examples ? 'templates/examples' : 'templates/blank',
   pkg: {}
 }
 
 export default function(root, cfg) {
-  
   // resolve config
   const config = Object.assign({}, DEFAULT_CONFIG, cfg)
   console.log(chalk`{blue.bold ${config.pkg.name}} v${config.pkg.version}`)
